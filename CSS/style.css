@@ -1,0 +1,269 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  ul {
+    list-style: none;
+  }
+   
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width:768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  
+  @media (min-width:992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  
+  @media (min-width:1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+  /*Start header*/
+  header {
+    position: fixed;
+    background-color: transparent;
+    width:100%;
+    z-index: 5;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top :10px;
+   
+  }
+
+  header ul {
+    display: flex;
+  }
+
+  header ul li {
+    padding: 0.5em;
+    transition: 0.9s ease;
+    margin: 0.5em;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  header ul li:hover {
+    transform: scale(1.1);
+  }
+
+  header ul li::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top:0;
+    left:0;
+    border-radius: 20px;
+    background-color:#C8EBB1;
+    z-index: -1;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+  header ul li:hover::after {
+    width: 100%;
+    overflow: hidden;
+    border-color: #C8EBB1;
+  }
+
+  header ul li a {
+    font-weight: 400;
+    margin: 0.5em;
+    font-size: 1.2em;
+  }
+
+  .user {
+    font-size: 1.2em;
+  }
+  header .logo a {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: #494234;
+  }
+
+  .home {
+    height: 100vh;
+    background : linear-gradient(to right ,#93C572 75% ,#C8EBB1 25%);
+    position: relative;
+    overflow: hidden;
+   }
+
+  .wave img{
+    position: absolute;
+    top:0;
+    right:23%;
+    z-index: 1;
+    bottom: 0;
+    height: 100%;
+    animation-name: home-an;
+    animation-duration: 0.7s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes home-an {
+    to {right:25%;}
+  }
+
+  .home {
+    padding-top: 3.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .home .home-text-holder{
+    width: 60%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .image ,
+  .home .home-text-holder .container {
+    flex-basis: 65%;   /*v.i*/
+  }
+
+  .image img {
+    width: 100%;  /*v.i*/
+  }
+  
+  .home div h1 {
+    font-size: 2.1em;
+    font-weight: 600;
+    word-spacing:-2%;
+    line-height: 0.2em;
+    text-transform: uppercase;
+    color: #494234;
+  }
+
+  .home div span {
+    font-size: 1.8em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #494234;
+  }
+
+  .home .container p {
+    margin-top: 10px;
+  }
+
+  .home button {
+    margin-top: 1em;
+    background-color: #494234;
+    color: white;
+    width:10em;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 0.1px;
+    cursor:pointer;
+    transition: 0.5s ease;
+  }
+
+  .home button:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  }
+
+  .icons{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    margin-left: 20px;
+  }
+
+  .icons i {
+    margin-left: 5px;
+    font-size: 20px;
+    display: inline-flex;  
+    height: 40px;
+    width: 40px;
+    background-color: #93C572;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+  }
+
+  .icons i:hover {
+    transform: translateY(-10%);
+  }
+
+  .right-section {
+    position: absolute;
+    bottom: 20%;
+    right:4%;
+    z-index: 6;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    width: 23em;
+    margin-bottom: 1em;
+  }
+  
+  .card-img {
+    width: 5em;
+    border-radius: 50%;
+    box-shadow: -5px 5px 25px rgba(1, 1, 1, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+  }
+
+  .card-img:hover {
+    background-color: rgb(73,66,52,0.7);
+  }
+
+  .card-img img {
+    width: 100%;
+  }
+
+  .card-text {
+    margin-left: 1.5em;
+  }
+
+  .card-text p {
+    font-size: 0.8em;
+  }
