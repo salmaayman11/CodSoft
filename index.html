@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calc-cont">
+        <input type="text" id="screenn" placeholder="0">
+            <button class="operation" onclick="AC()">AC </button>
+            <button class="operation" onclick="DEL()">DEL</button>
+            <button class="operation" onclick="calcu('%')">%</button>
+            <button class="operation" onclick="calcu('/')">/</button>
+
+            <button onclick="calcu(7)">7</button>
+            <button onclick="calcu(8)">8</button>
+            <button onclick="calcu(9)">9</button>
+            <button class="operation" onclick="calcu('*')">*</button>
+
+            <button onclick="calcu(4)">4</button>
+            <button onclick="calcu(5)">5</button>
+            <button onclick="calcu(6)">6</button>
+            <button class="operation" onclick="calcu('-')">-</button>
+
+            <button onclick="calcu(1)">1</button>
+            <button onclick="calcu(2)">2</button>
+            <button onclick="calcu(3)">3</button>
+            <button class="operation" onclick="calcu('+')">+</button>
+
+            <button onclick="calcu(0)">0</button>
+            <button class="operation" onclick="calcu('.')">.</button>
+            <button class="operation equal" onclick="result()">=</button>
+    </div>
+    <script src="calc.js" ></script>
+</body>
+</html>
